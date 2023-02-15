@@ -1,0 +1,7 @@
+.WidthContainer {
+  width: 100%;
+  max-width: 960px;
+  margin: 0px auto;
+  margin-left: min(30px, 5%);
+  margin-right: min(30px, 5%);
+}

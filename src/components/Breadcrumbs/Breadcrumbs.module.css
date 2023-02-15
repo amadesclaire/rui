@@ -1,0 +1,67 @@
+@import "../global.module.css";
+
+.breadcrumbs {
+}
+
+.breadcrumbs > ol {
+  padding: 0;
+  margin: 15px 0 10px 0;
+  list-style-type: none;
+  display: flex;
+}
+
+.breadcrumbs > ol > li {
+  margin-bottom: 5px;
+}
+
+.breadcrumbs > ol > li:not(:first-child) {
+  margin-left: 10px;
+  padding-left: 15px;
+}
+
+.breadcrumbs > ol > li > a {
+  cursor: pointer;
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-underline-offset: 0.1rem;
+  text-decoration-thickness: 1px;
+}
+
+.breadcrumbs > ol > li > a:hover {
+  text-decoration-thickness: 3px;
+}
+
+.breadcrumbs > ol > li > a:focus {
+  color: var(--text-primary);
+  background-color: var(--yellow);
+  border-color: var(--yellow);
+  outline: 3px solid rbga(0, 0, 0, 0);
+  /* text-underline-offset: 0.1rem;
+  text-decoration-thickness: 3px; */
+  text-decoration: none;
+  box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+}
+
+.breadcrumbs > ol > li > a:focus-visible {
+  outline: none;
+}
+
+.breadcrumbs > ol > li::before {
+  border-width: max(1px, 0.0625em) max(1px, 0.0625em) 0 0;
+  font-size: max(16px, 1em);
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -0.206875em;
+  width: 0.4375em;
+  height: 0.4375em;
+  margin: auto 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border: solid;
+  border-width: 1px 1px 0 0;
+  border-color: #505a5f;
+}

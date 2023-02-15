@@ -1,0 +1,102 @@
+:root {
+  --text-primary-color: #0b0c0c;
+  --text-secondary-color: #505a5f;
+  --link-color: #1d70b8;
+  --link-hover-color: #003078;
+  --link-visited-color: #4c2c92;
+  --link-active-color: #0b0c0c;
+  --border-color: #b1b4b6;
+  --input-border-color: #0b0c0c;
+  --focus-color: #ffdd00;
+  --focus-text-colour: #0b0c0b;
+  --error-colour: #d4351c;
+  --success-colour: #00703c;
+  --brand-color: #1d70b8;
+
+  --black: #0b0c0c;
+  --dark-grey: #505a5f;
+  --mid-grey: #b1b4b6;
+  --light-grey: #f3f2f1;
+  --white: #ffffff;
+
+  --red: #d4351c;
+  --yellow: #ffdd00;
+  --green: #00703c;
+  --blue: #1d70b8;
+  --dark-blue: #003078;
+  --light-blue: #5694ca;
+  --purple: #4c2c92;
+  --light-purple: #6f72af;
+  --orange: #f47738;
+  --pink: #d53880;
+  --light-pink: #f499be;
+  --dark-red: #aa2a16;
+  --brown: #b58840;
+  --light-green: #85994b;
+  --dark-green: #005a30;
+  --Turquoise: #28a197;
+
+  --spacing-responsive-0: 0px;
+  --spacing-responsive-1: 5px;
+  --spacing-responsive-2: 10px;
+  --spacing-responsive-3: 15px;
+  --spacing-responsive-4: 15px;
+  --spacing-responsive-5: 15px;
+  --spacing-responsive-6: 20px;
+  --spacing-responsive-7: 25px;
+  --spacing-responsive-8: 30px;
+  --spacing-responsive-9: 40px;
+
+  --spacing-static-0: 0px;
+  --spacing-static-1: 5px;
+  --spacing-static-2: 10px;
+  --spacing-static-3: 15px;
+  --spacing-static-4: 15px;
+  --spacing-static-5: 15px;
+  --spacing-static-6: 20px;
+  --spacing-static-7: 25px;
+  --spacing-static-8: 30px;
+  --spacing-static-9: 40px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+h1 {
+  font-size: 48px;
+  margin: 0;
+}
+h2 {
+  font-size: 36px;
+  margin: 0;
+}
+h3 {
+  font-size: 24px;
+  margin: 0;
+}
+h4 {
+  font-size: 19px;
+  margin: 0;
+}
+p {
+  font-size: 19px;
+  margin: 0;
+}
+
+.caption-xl {
+  color: var(--text-secondary-color);
+  font-size: 27px;
+}
+.caption-l {
+  color: var(--text-secondary-color);
+  font-size: 24px;
+}
+.caption-m {
+  color: var(--text-secondary-color);
+  font-size: 19px;
+}
+.lead {
+  font-size: 24px;
+}
