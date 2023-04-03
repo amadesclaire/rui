@@ -1,37 +1,76 @@
-import styles from "./Button.module.css";
+import className from 'classnames';
 
-type ButtonVariant = "primary" | "secondary" | "warning" | "link";
-
-interface Button {
-  text?: string;
-  variant?: ButtonVariant;
-  disabled?: boolean | undefined;
+interface ButtonProps {
+  children: React.ReactNode;
+  primary?: boolean;
+  secondary?: boolean;
+  success?: boolean;
+  warning?: boolean;
+  danger?: boolean;
+  outline?: boolean;
+  rounded?: boolean;
+  className?: string;
 }
 
 const Button = ({
-  text = "Click me",
-  variant = "primary",
-  disabled = false,
-}: Button) => {
-  const style: any = [styles.btn, styles[`${variant}`]].join(" ");
+  children,
+  primary,
+  secondary,
+  success,
+  warning,
+  danger,
+  outline,
+  rounded,
+  ...rest // allows events (onclick) to be added dynamically from parent
+}: ButtonProps) => {
+  const classes = className(
+    // if rest.className is passed, it will be added to the class list
+    rest.className,
+    'px-3 py-1.5 border',
+    {
+      'border-blue-500 bg-blue-500 text-white': primary,
+      'border-gray-900 bg-gray-900 text-white': secondary,
+      'border-green-500 bg-green-500 text-white': success,
+      'border-yellow-400 bg-yellow-400 text-white': warning,
+      'border-red-500 bg-red-500 text-white': danger,
+      'rounded-full': rounded,
+      'bg-white': outline,
+      'text-blue-500': outline && primary,
+      'text-gray-900': outline && secondary,
+      'text-green-500': outline && success,
+      'text-yellow-400': outline && warning,
+      'text-red-500': outline && danger,
+    }
+  );
+
   return (
-    <button className={style} disabled={disabled} aria-label={text}>
-      {text}
+    <button {...rest} className={classes}>
+      {children}
     </button>
   );
 };
 
+Button.propTypes = {
+  checkVariationValue: ({
+    primary,
+    secondary,
+    success,
+    warning,
+    danger,
+  }: ButtonProps) => {
+    const count =
+      Number(!!primary) +
+      Number(!!secondary) +
+      Number(!!warning) +
+      Number(!!success) +
+      Number(!!danger);
+
+    if (count > 1) {
+      return new Error(
+        'Only one of primary, secondary, success, warning, danger can be true'
+      );
+    }
+  },
+};
+
 export default Button;
-
-/*
-  TODO; 
-   Right and left Icon
-   variants
-
-   {
-  text: string = "This is a button",
-  variant: ButtonVariant = "default",
-  disabled: Boolean = false,
-}
-
-*/

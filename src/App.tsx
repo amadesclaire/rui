@@ -1,33 +1,12 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import "./App.css";
-import Button from "./components/Button/Button";
-import ButtonGroup from "./components/ButtonGroup/ButtonGroup";
-import Hero from "./components/Hero/Hero";
-import Breadcrumbs from "./components/Breadcrumbs/Breadcrumbs";
-import WidthContainer from "./components/WidthContainer/WidthContainer";
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import './App.css';
+import Button from './components/Button/Button';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="App">
-      <WidthContainer>
-        <Breadcrumbs />
-      </WidthContainer>
-      <Hero
-        title={"Welcome to GovDesignReact"}
-        subtitle={
-          "The best place to find government design components built in react"
-        }
-        children={<h3>Simpler, clearer, faster</h3>}
-      />
-      <ButtonGroup>
-        <Button text="primary" />
-        <Button variant="secondary" text="secondary" />
-        <Button variant="warning" text="warning" />
-        <Button variant="link" text="link" />
-      </ButtonGroup>
+      <Button className="w-50">Click me</Button>
       {/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
