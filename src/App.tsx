@@ -1,13 +1,37 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import './App.css';
-import Button from './components/Button/Button';
+import ChevronDown from './assets/icons/ChevronDown';
+import TriangleIcon from './assets/icons/TriangleIcon';
+import Aside from './components/Aside/Aside';
+import Nav from './components/Nav/Nav';
+import NavItem from './components/NavItem/NavItem';
+import Dashboard from './layouts/Dashboard/Dashboard';
 
 function App() {
   return (
     <div className="App">
-      <Button className="w-50">Click me</Button>
-      {/* <div>
+      <Dashboard
+        aside={
+          <Aside
+            nav={
+              <Nav>
+                <NavItem
+                  text="Design"
+                  href="https://www.google.com"
+                  iconRight={<ChevronDown h="16" w="16" />}
+                />
+                <NavItem text="Discover" href="https://www.google.com" />
+              </Nav>
+            }
+          />
+        }
+        body={
+          <main>
+            <h1>Hello world</h1>
+          </main>
+        }
+      />
+      {/* 
+      <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
         </a>
@@ -15,18 +39,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p> */}
+       */}
     </div>
   );
 }
